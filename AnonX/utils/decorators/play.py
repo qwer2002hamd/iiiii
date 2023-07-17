@@ -1,13 +1,29 @@
+#
+# Copyright (C) 2021-2022 by Alexa_Help@Github, < https://github.com/Jankarikiduniya >.
+# A Powerful Music Bot Property Of Rocks Indian Largest Chatting Group
+
+# Kanged By © @Dr_Asad_Ali
+# Rocks © @Shayri_Music_Lovers
+# Owner Asad Ali
+# Harshit Sharma
+# All rights reserved. © Alisha © Alexa © Yukki
+
+
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 from config import PLAYLIST_IMG_URL, PRIVATE_BOT_MODE, adminlist
 from strings import get_string
 from AnonX import YouTube, app
 from AnonX.misc import SUDOERS
-from AnonX.utils.database import (get_cmode, get_lang,
-                                       get_playmode, get_playtype,
-                                       is_active_chat,
-                                       is_served_private_chat)
+from AnonX.utils.database import (
+    get_cmode,
+    get_lang,
+    get_playmode,
+    get_playtype,
+    is_active_chat,
+    is_commanddelete_on,
+    is_served_private_chat,
+)
 from AnonX.utils.database.memorydatabase import is_maintenance
 from AnonX.utils.inline.playlist import botplaylist_markup
 
@@ -17,7 +33,7 @@ def PlayWrapper(command):
         if await is_maintenance() is False:
             if message.from_user.id not in SUDOERS:
                 return await message.reply_text(
-                    "» ʙᴏᴛ ɪs ᴜɴᴅᴇʀ ᴍᴀɪɴᴛᴇɴᴀɴᴄᴇ ғᴏʀ sᴏᴍᴇ ᴛɪᴍᴇ, ᴩʟᴇᴀsᴇ ᴠɪsɪᴛ sᴜᴩᴩᴏʀᴛ ᴄʜᴀᴛ ᴛᴏ ᴋɴᴏᴡ ᴛʜᴇ ʀᴇᴀsᴏɴ..."
+                    "Bot is under maintenance. Please wait for some time..."
                 )
         if PRIVATE_BOT_MODE == str(True):
             if not await is_served_private_chat(message.chat.id):
@@ -25,30 +41,25 @@ def PlayWrapper(command):
                     "**ᴩʀɪᴠᴀᴛᴇ ᴍᴜsɪᴄ ʙᴏᴛ**\n\nᴏɴʟʏ ғᴏʀ ᴛʜᴇ ᴄʜᴀᴛs ᴀᴜᴛʜᴏʀɪsᴇᴅ ʙʏ ᴛʜᴇ ᴏᴡɴᴇʀ. ʀᴇǫᴜᴇsᴛ ɪɴ ᴍʏ ᴏᴡɴᴇʀ's ᴩᴍ ᴛᴏ ᴀᴜᴛʜᴏʀɪsᴇ ʏᴏᴜʀ ᴄʜᴀᴛ ғᴏʀ ᴜsɪɴɢ ᴍᴇ."
                 )
                 return await app.leave_chat(message.chat.id)
+        if await is_commanddelete_on(message.chat.id):
+            try:
+                await message.delete()
+            except:
+                pass
         language = await get_lang(message.chat.id)
         _ = get_string(language)
         audio_telegram = (
-            (
-                message.reply_to_message.audio
-                or message.reply_to_message.voice
-            )
+            (message.reply_to_message.audio or message.reply_to_message.voice)
             if message.reply_to_message
             else None
         )
         video_telegram = (
-            (
-                message.reply_to_message.video
-                or message.reply_to_message.document
-            )
+            (message.reply_to_message.video or message.reply_to_message.document)
             if message.reply_to_message
             else None
         )
         url = await YouTube.url(message)
-        if (
-            audio_telegram is None
-            and video_telegram is None
-            and url is None
-        ):
+        if audio_telegram is None and video_telegram is None and url is None:
             if len(message.command) < 2:
                 if "stream" in message.command:
                     return await message.reply_text(_["str_1"])
@@ -80,7 +91,7 @@ def PlayWrapper(command):
                 else:
                     if message.from_user.id not in admins:
                         return await message.reply_text(_["play_4"])
-        if message.command[0][0] == "v" or message.command[0][0] == "ف":
+        if message.command[0][0] == "v":
             video = True
         else:
             if "-v" in message.text:
