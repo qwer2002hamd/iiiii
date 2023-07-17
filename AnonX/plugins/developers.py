@@ -52,14 +52,13 @@ async def yas(client, message):
             [
                 [
                     InlineKeyboardButton(
-                        "اضغط لاضافه البوت لمجموعتك", url=f"https://t.me/{BOT_USERNAME}?startgroup=true"), 
-               ],
-               [
-                    InlineKeyboardButton(
                         "‹ مـبرمج الـسورس ›", url=f"https://t.me/ah_2_v"), 
                 
                     InlineKeyboardButton(
                         "‹ قـناة الـسورس ›", url=f"https://t.me/ah07v"),
+                ],[
+                    InlineKeyboardButton(
+                        "اضغط لاضافه البوت لمجموعتك", url=f"https://t.me/USER_BOT?startgroup=true"),
                 ],
 
             ]
