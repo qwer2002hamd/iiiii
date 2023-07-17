@@ -3,6 +3,6 @@
 </h2>
 
 <p align="center">
-  <img src="[https://telegra.ph/file/19ba9feb9a312b0ce78aa.jpg](https://telegra.ph/file/19ba9feb9a312b0ce78aa.jpg)[https://telegra.ph/file/19ba9feb9a312b0ce78aa.jpg](https://telegra.ph/file/19ba9feb9a312b0ce78aa.jpg)https://telegra.ph/file/19ba9feb9a312b0ce78aa.jpg">
+  <img src="[https://telegra.ph/file/19ba9feb9a312b0ce78aa.jpg](https://telegra.ph/file/19ba9feb9a312b0ce78aa.jpg)">
 </p>
 
