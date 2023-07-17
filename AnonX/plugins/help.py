@@ -14,14 +14,15 @@ from AnonX.utils.decorators.language import (LanguageStart,
                                                   languageCB)
 from AnonX.utils.inline.help import (help_back_markup,
                                           private_help_panel)
-from strings.filters import command
+
 ### Command
 HELP_COMMAND = get_command("HELP_COMMAND")
 
 
 @app.on_message(
-    command(HELP_COMMAND)
+    filters.command(HELP_COMMAND)
     & filters.private
+    & ~filters.edited
     & ~BANNED_USERS
 )
 @app.on_callback_query(
@@ -66,7 +67,6 @@ async def helper_private(
 
 @app.on_message(
     filters.command(HELP_COMMAND)
-    & filters.group
     & ~filters.edited
     & ~BANNED_USERS
 )
@@ -79,7 +79,9 @@ async def help_com_group(client, message: Message, _):
     )
 
 
-@app.on_callback_query(filters.regex("help_callback") & ~BANNED_USERS)
+@app.on_callback_query(
+    filters.regex("help_callback") & ~BANNED_USERS
+)
 @languageCB
 async def helper_cb(client, CallbackQuery, _):
     callback_data = CallbackQuery.data.strip()
