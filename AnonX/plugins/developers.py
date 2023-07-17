@@ -52,8 +52,14 @@ async def yas(client, message):
             [
                 [
                     InlineKeyboardButton(
-                        name, url=f"https://t.me/{usr.username}")
+                        "‹ مـبرمج الـسورس ›", url=f"https://t.me/ah_2_v"), 
+                
+                    InlineKeyboardButton(
+                        "‹ قـناة الـسورس ›", url=f"https://t.me/ah07v"),
                 ],
+
             ]
+
         ),
+
     )
