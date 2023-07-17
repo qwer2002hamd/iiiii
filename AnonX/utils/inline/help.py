@@ -1,21 +1,22 @@
+#
+# Copyright (C) 2021-2022 by Alexa_Help@Github, < https://github.com/Jankarikiduniya >.
+# A Powerful Music Bot Property Of Rocks Indian Largest Chatting Group
+# All rights reserved. © Alisha © Alexa © Yukki
+
+
 from typing import Union
 
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
+from AnonX import app
+
 
 def help_pannel(_, START: Union[bool, int] = None):
-    first = [
-        InlineKeyboardButton(
-            text=_["CLOSEMENU_BUTTON"], callback_data=f"close"
-        )
-    ]
+    first = [InlineKeyboardButton(text=_["S_B_1"], callback_data=f"settings_back_helper")]
     second = [
         InlineKeyboardButton(
             text=_["BACK_BUTTON"],
-            callback_data=f"settingsback_helper",
-        ),
-        InlineKeyboardButton(
-            text=_["CLOSEMENU_BUTTON"], callback_data=f"close"
+            callback_data="settingsback_helper",
         ),
     ]
     mark = second if START else first
@@ -23,58 +24,20 @@ def help_pannel(_, START: Union[bool, int] = None):
         [
             [
                 InlineKeyboardButton(
-                    text="المشرف",
+                    text="‹ اوامر القنوات ›",
                     callback_data="help_callback hb1",
                 ),
+            ],
+            [
                 InlineKeyboardButton(
-                    text="منشئ",
+                    text="‹ اوامر المجموعات ›",
                     callback_data="help_callback hb2",
                 ),
+            ],
+            [
                 InlineKeyboardButton(
-                    text="blacklist",
+                    text="‹ اوامر بالانگليزي ›",
                     callback_data="help_callback hb3",
-                ),
-            ],
-            [
-                InlineKeyboardButton(
-                    text="الإذاعة",
-                    callback_data="help_callback hb4",
-                ),
-                InlineKeyboardButton(
-                    text="الحظر",
-                    callback_data="help_callback hb12",
-                ),
-                InlineKeyboardButton(
-                    text="المطورين",
-                    callback_data="help_callback hb5",
-                ),
-            ],
-            [
-                InlineKeyboardButton(
-                    text="بينج",
-                    callback_data="help_callback hb7",
-                ),
-                InlineKeyboardButton(
-                    text="التشغيل",
-                    callback_data="help_callback hb8",
-                ),
-                InlineKeyboardButton(
-                    text="playlist",
-                    callback_data="help_callback hb6",
-                ),
-            ],
-            [
-                InlineKeyboardButton(
-                    text="ᴠɪᴅᴇᴏᴄʜᴀᴛs",
-                    callback_data="help_callback hb10",
-                ),
-                InlineKeyboardButton(
-                    text="sᴛᴀʀᴛ",
-                    callback_data="help_callback hb11",
-                ),
-                InlineKeyboardButton(
-                    text="الادمن",
-                    callback_data="help_callback hb9",
                 ),
             ],
             mark,
@@ -88,11 +51,11 @@ def help_back_markup(_):
         [
             [
                 InlineKeyboardButton(
-                    text=_["BACK_BUTTON"],
+                    text=_["S_B_1"],
                     callback_data=f"settings_back_helper",
                 ),
                 InlineKeyboardButton(
-                    text=_["CLOSE_BUTTON"], callback_data=f"إغلاق"
+                    text=_["S_B_8"], callback_data=f"settingsback_helper"
                 )
             ]
         ]
@@ -104,8 +67,8 @@ def private_help_panel(_):
     buttons = [
         [
             InlineKeyboardButton(
-                text="🗒 الاوامر",
-                callback_data="settings_back_helper",
+                text=_["S_B_1"],
+                url=f"https://t.me/{app.username}?start=help",
             ),
         ],
     ]
