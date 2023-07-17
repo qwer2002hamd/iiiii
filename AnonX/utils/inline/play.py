@@ -25,7 +25,7 @@ selections = [
 ## After Edits with Timer Bar
 
 
-def stream_markup(_, videoid, chat_id):
+def stream_markup_timer(_, videoid, chat_id, played, dur):
     bar = random.choice(selections)
     buttons = [
         [
@@ -48,7 +48,7 @@ def stream_markup(_, videoid, chat_id):
     return buttons
 
 
-def telegram_markup(_, chat_id):
+def telegram_markup_timer(_, chat_id, played, dur):
     bar = random.choice(selections)
     buttons = [
         [
@@ -76,7 +76,7 @@ def telegram_markup(_, chat_id):
 ## Inline without Timer Bar
 
 
-def stream_markup_timer(_, videoid, chat_id, played, dur):
+def stream_markup(_, videoid, chat_id):
     buttons = [
         [
             InlineKeyboardButton(
@@ -94,7 +94,7 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
     return buttons
 
 
-def telegram_markup_timer(_, chat_id, played, dur):
+def telegram_markup(_, chat_id):
     buttons = [
         [
             InlineKeyboardButton(
@@ -143,11 +143,11 @@ def playlist_markup(_, videoid, user_id, ptype, channel, fplay):
         [
             InlineKeyboardButton(
                 text=_["P_B_1"],
-                callback_data=f"AnonPlaylists {videoid}|{user_id}|{ptype}|a|{channel}|{fplay}",
+                callback_data=f"YukkiPlaylists {videoid}|{user_id}|{ptype}|a|{channel}|{fplay}",
             ),
             InlineKeyboardButton(
                 text=_["P_B_2"],
-                callback_data=f"AnonPlaylists {videoid}|{user_id}|{ptype}|v|{channel}|{fplay}",
+                callback_data=f"YukkiPlaylists {videoid}|{user_id}|{ptype}|v|{channel}|{fplay}",
             ),
         ],
         [
