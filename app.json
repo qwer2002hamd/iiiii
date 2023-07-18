@@ -31,7 +31,11 @@
         "description": "حط هنا كود المونجو .",
         "value": "mongodb+srv://lucifer:ASShaw96@lucifer.vuows.mongodb.net/lucifer?retryWrites=true&w=majority",
         "required": false
-      },
+      },  
+        "MUST_JOIN": {
+            "description": "Username of a group or channel for which you want to set force sub.(without @)",
+            "required": true      
+      }, 
       "MUSIC_BOT_NAME": {
         "description": "A name for your Music Bot. You can use special characters bot ko jhaat farak ni padega",
         "value": "",
