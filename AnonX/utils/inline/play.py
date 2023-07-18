@@ -42,7 +42,17 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
             InlineKeyboardButton(
                 text=_["PL_B_3"],
                 callback_data=f"PanelMarkup {videoid}|{chat_id}",
-            ),
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                text="༺قـناة الـسورس༻", url="https://t.me/ah07v"
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                text="اضغط لاضافه البوت لمجموعتك", url="https://t.me/{BOT_USERNAME}?startgroup=true"
+            ) 
         ],
     ]
     return buttons
@@ -67,7 +77,17 @@ def telegram_markup_timer(_, chat_id, played, dur):
             InlineKeyboardButton(
                 text=_["PL_B_3"],
                 callback_data=f"PanelMarkup None|{chat_id}",
-            ),
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                text="༺قـناة الـسورس༻", url="https://t.me/ah07v"
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                text="اضغط لاضافه البوت لمجموعتك", url="https://t.me/{BOT_USERNAME}?startgroup=true"
+            ) 
         ],
     ]
     return buttons
@@ -77,6 +97,7 @@ def telegram_markup_timer(_, chat_id, played, dur):
 
 
 def stream_markup(_, videoid, chat_id):
+    bar = random.choice(selections)
     buttons = [
         [
             InlineKeyboardButton(
@@ -88,30 +109,50 @@ def stream_markup(_, videoid, chat_id):
             InlineKeyboardButton(
                 text=_["PL_B_3"],
                 callback_data=f"PanelMarkup None|{chat_id}",
-            ), 
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                text="༺قـناة الـسورس༻", url="https://t.me/ah07v"
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                text="اضغط لاضافه البوت لمجموعتك", url="https://t.me/{BOT_USERNAME}?startgroup=true"
+            ) 
         ],
     ]
     return buttons
 
 
 def telegram_markup(_, chat_id):
+    bar = random.choice(selections)
     buttons = [
+        [
+            InlineKeyboardButton(
+                text=_["PL_B_2"],
+                callback_data=f"add_playlist {videoid}",
+            )
+        ],
         [
             InlineKeyboardButton(
                 text=_["PL_B_3"],
                 callback_data=f"PanelMarkup None|{chat_id}",
-            ),
-            InlineKeyboardButton(text=_["CLOSEMENU_BUTTON"], callback_data="close"),
+            )
         ],
-
+        [
+            InlineKeyboardButton(
+                text="༺قـناة الـسورس༻", url="https://t.me/ah07v"
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                text="اضغط لاضافه البوت لمجموعتك", url="https://t.me/{BOT_USERNAME}?startgroup=true"
+            ) 
+        ],
     ]
     return buttons
 
-
-## By Anon
-close_keyboard = InlineKeyboardMarkup(
-    [[InlineKeyboardButton(text="🗑حذف", callback_data="close")]]
-)
 
 ## Search Query Inline
 
@@ -143,11 +184,11 @@ def playlist_markup(_, videoid, user_id, ptype, channel, fplay):
         [
             InlineKeyboardButton(
                 text=_["P_B_1"],
-                callback_data=f"YukkiPlaylists {videoid}|{user_id}|{ptype}|a|{channel}|{fplay}",
+                callback_data=f"AnonPlaylists {videoid}|{user_id}|{ptype}|a|{channel}|{fplay}",
             ),
             InlineKeyboardButton(
                 text=_["P_B_2"],
-                callback_data=f"YukkiPlaylists {videoid}|{user_id}|{ptype}|v|{channel}|{fplay}",
+                callback_data=f"AnonPlaylists {videoid}|{user_id}|{ptype}|v|{channel}|{fplay}",
             ),
         ],
         [
@@ -224,6 +265,7 @@ def slider_markup(_, videoid, user_id, query, query_type, channel, fplay):
 
 
 def queue_markup(_, videoid, chat_id):
+    bar = random.choice(selections)
     buttons = [
         [
             InlineKeyboardButton(
