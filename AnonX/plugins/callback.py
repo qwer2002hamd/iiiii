@@ -487,7 +487,7 @@ async def markup_timer():
                     _ = get_string("en")
                 try:
                     buttons = (
-                        stream_markup_timer(
+                        telegram_markup_timer(
                             _,
                             playing[0]["vidid"],
                             chat_id,
