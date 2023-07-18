@@ -219,64 +219,6 @@ def slider_markup(_, videoid, user_id, query, query_type, channel, fplay):
     return buttons
 
 
-## Cpanel Markup
-
-
-def panel_markup_1(_, videoid, chat_id):
-    buttons = [
-        [
-            InlineKeyboardButton(
-                text="▷",
-                callback_data=f"ADMIN Resume|{chat_id}",
-            ),
-            InlineKeyboardButton(text="ايقاف مؤقت", callback_data=f"ADMIN Pause|{chat_id}"),
-            InlineKeyboardButton(text="تخطي", callback_data=f"ADMIN Skip|{chat_id}"),
-            InlineKeyboardButton(text="ايقاف", callback_data=f"ADMIN Stop|{chat_id}"),
-        ],
-        [
-            InlineKeyboardButton(
-                text=_["PL_B_2"],
-                callback_data=f"add_playlist {videoid}",
-            ),
-        ],
-        [
-            InlineKeyboardButton(
-                text="⇆ عشوائي ⇆",
-                callback_data=f"ADMIN Shuffle|{chat_id}",
-            ),
-            InlineKeyboardButton(
-                text="↻ تكرار ↻", callback_data=f"ADMIN Loop|{chat_id}"
-            ),
-        ],
-        [
-            InlineKeyboardButton(
-                text="⏮ 10 ثواني",
-                callback_data=f"ADMIN 1|{chat_id}",
-            ),
-            InlineKeyboardButton(
-                text="⏭ 10 ثواني",
-                callback_data=f"ADMIN 2|{chat_id}",
-            ),
-        ],
-        [
-            InlineKeyboardButton(
-                text="⏮ 30 ثانية",
-                callback_data=f"ADMIN 3|{chat_id}",
-            ),
-            InlineKeyboardButton(
-                text="⏭ 30 ثانية",
-                callback_data=f"ADMIN 4|{chat_id}",
-            ),
-        ],
-        [
-            InlineKeyboardButton(
-                text="رجوع🔙",
-                callback_data=f"MainMarkup {videoid}|{chat_id}",
-            ),
-        ],
-    ]
-    return buttons
-
 
 ## Queue Markup Anon
 
