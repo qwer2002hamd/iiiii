@@ -265,11 +265,15 @@ def queue_markup(_, videoid, chat_id):
     buttons = [
         [
             InlineKeyboardButton(
-                text="▷",
+                text="كمل",
                 callback_data=f"ADMIN Resume|{chat_id}",
             ),
             InlineKeyboardButton(text="ايقاف مؤقت", callback_data=f"ADMIN Pause|{chat_id}"),
+        ],
+        [
             InlineKeyboardButton(text="قائمة التشغيل", callback_data=f"add_playlist {videoid}"),
+        ],
+        [
             InlineKeyboardButton(text="تخطي", callback_data=f"ADMIN Skip|{chat_id}"),
             InlineKeyboardButton(text="ايقاف", callback_data=f"ADMIN Stop|{chat_id}"),
         ],
