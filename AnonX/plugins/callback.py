@@ -30,7 +30,8 @@ from AnonX.utils.inline.play import (panel_markup_1,
                                      panel_markup_2,
                                      panel_markup_3,
                                      stream_markup,
-                                     telegram_markup)
+                                     telegram_markup,
+                                     close_keyboard)
 from AnonX.utils.stream.autoclear import auto_clean
 from AnonX.utils.thumbnails import gen_thumb
 
