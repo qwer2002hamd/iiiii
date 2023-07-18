@@ -17,7 +17,6 @@ from AnonX.utils import bot_sys_stats
 from AnonX.utils.database import (
     is_active_chat,
     is_music_playing,
-    is_muted,
     is_nonadmin_chat,
     music_off,
     music_on,
