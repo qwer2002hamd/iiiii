@@ -494,13 +494,6 @@ async def markup_timer():
                             seconds_to_min(playing[0]["played"]),
                             playing[0]["dur"],
                         )
-                        if markup == "stream"
-                        else telegram_markup_timer(
-                            _,
-                            chat_id,
-                            seconds_to_min(playing[0]["played"]),
-                            playing[0]["dur"],
-                        )
                     )
                     await mystic.edit_reply_markup(
                         reply_markup=InlineKeyboardMarkup(buttons)
