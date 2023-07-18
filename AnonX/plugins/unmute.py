@@ -16,7 +16,7 @@ from config import BANNED_USERS
 from strings import get_command
 from AnonX import app
 from AnonX.core.call import Anon
-from AlexaMusic.utils.database import (is_active_chat,
+from AnonX.utils.database import (is_active_chat,
                                        is_music_playing, is_muted,
                                        is_nonadmin_chat, music_off,
                                        music_on, mute_off, mute_on,
