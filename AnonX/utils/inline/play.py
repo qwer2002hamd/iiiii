@@ -274,8 +274,13 @@ def queue_markup(_, videoid, chat_id):
         ],
         [
             InlineKeyboardButton(
-                text="🗑حذف", callback_data=f"ADMIN CloseA|{chat_id}"
+                text="‹ قـناة الـسورس ›", url="https://t.me/ah07v"
             )
+        ],
+        [
+            InlineKeyboardButton(
+                text="اضغط لاضافه البوت لمجموعتك", url="https://t.me/USER_BOT?startgroup=true"
+            ) 
         ],
     ]
     return buttons
