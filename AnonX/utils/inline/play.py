@@ -51,7 +51,7 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
         ],
         [
             InlineKeyboardButton(
-                text="اضغط لاضافه البوت لمجموعتك", url="https://t.me/{BOT_USERNAME}?startgroup=true"
+                text="اضغط لاضافه البوت لمجموعتك", url="https://t.me/USER_BOT?startgroup=true"
             ) 
         ],
     ]
@@ -84,7 +84,7 @@ def telegram_markup_timer(_, chat_id, played, dur):
         ],
         [
             InlineKeyboardButton(
-                text="اضغط لاضافه البوت لمجموعتك", url="https://t.me/{BOT_USERNAME}?startgroup=true"
+                text="اضغط لاضافه البوت لمجموعتك", url="https://t.me/USER_BOT?startgroup=true"
             ) 
         ],
     ]
@@ -113,7 +113,7 @@ def stream_markup(_, videoid, chat_id):
         ],
         [
             InlineKeyboardButton(
-                text="اضغط لاضافه البوت لمجموعتك", url="https://t.me/{BOT_USERNAME}?startgroup=true"
+                text="اضغط لاضافه البوت لمجموعتك", url="https://t.me/USER_BOT?startgroup=true"
             ) 
         ],
     ]
@@ -139,7 +139,7 @@ def telegram_markup(_, chat_id):
         ],
         [
             InlineKeyboardButton(
-                text="اضغط لاضافه البوت لمجموعتك", url="https://t.me/{BOT_USERNAME}?startgroup=true"
+                text="اضغط لاضافه البوت لمجموعتك", url="https://t.me/USER_BOT?startgroup=true"
             ) 
         ],
     ]
