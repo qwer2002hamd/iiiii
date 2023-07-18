@@ -15,13 +15,13 @@ from AnonX.core.call import Anon
 from AnonX.misc import SUDOERS, db
 from AnonX.utils import bot_sys_stats
 from AnonX.utils.database import (
+    get_active_chats,
+    get_lang,
     is_active_chat,
     is_music_playing,
     is_nonadmin_chat,
     music_off,
     music_on,
-    mute_off,
-    mute_on,
     set_loop,
 )
 from AnonX.utils.decorators.language import languageCB
