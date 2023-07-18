@@ -287,7 +287,7 @@ def queue_markup(_, videoid, chat_id, user_id, query, query_type, channel, fplay
 
 
 
-def panel_markup_1( videoid, chat_id):
+def panel_markup_1( videoid, chat_id,_):
     buttons = [
         [
             InlineKeyboardButton(
@@ -324,7 +324,7 @@ def panel_markup_1( videoid, chat_id):
     return buttons
 
 
-def panel_markup_2( videoid, chat_id):
+def panel_markup_2( videoid, chat_id,_):
     buttons = [
         [
             InlineKeyboardButton(
@@ -362,7 +362,7 @@ def panel_markup_2( videoid, chat_id):
     return buttons
 
 
-def panel_markup_3( videoid, chat_id):
+def panel_markup_3( videoid, chat_id,_):
     buttons = [
         [
             InlineKeyboardButton(
