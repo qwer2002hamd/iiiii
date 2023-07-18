@@ -33,7 +33,7 @@ def setting_markup(_):
                 text="‹ قناة الـسورس ›",
                 url="https://t.me/ah07v",
             ),
-            InlineKeyboardButton(text=_["BACK_BUTTON"], callback_data="settings_back_helper"),
+            InlineKeyboardButton(text=_["S_B_1"], callback_data="settings_back_helper"),
         ],
     ]
     return buttons
