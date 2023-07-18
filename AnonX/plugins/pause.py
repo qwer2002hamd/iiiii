@@ -7,6 +7,7 @@ from AnonX import app
 from AnonX.core.call import Anon
 from AnonX.utils.database import is_music_playing, music_off
 from AnonX.utils.decorators import AdminRightsCheck
+from AnonX.utils.decorators.adminss import AdminRightsCheckk
 from AnonX.utils.inline.play import close_keyboard
 from strings.filters import command
 # Commands
