@@ -489,7 +489,6 @@ async def markup_timer():
                     buttons = (
                         telegram_markup_timer(
                             _,
-                            playing[0]["vidid"],
                             chat_id,
                             seconds_to_min(playing[0]["played"]),
                             playing[0]["dur"],
@@ -505,4 +504,3 @@ async def markup_timer():
 
 
 asyncio.create_task(markup_timer())
-
