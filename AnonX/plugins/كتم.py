@@ -22,7 +22,7 @@ PAUSE_COMMAND = get_command("PAUSE_COMMAND")
 @AdminRightsCheck
 async def pause_admin(cli, message: Message, _, chat_id):
     if not len(message.command) == 1:
-        return await message.reply_text(_["general_2"])
+        return await message.reply_text(_["general_6"])
     if not await is_music_playing(chat_id):
         return await message.reply_text(_["admin_5"])
     await music_off(chat_id)
@@ -41,7 +41,7 @@ async def pause_admin(cli, message: Message, _, chat_id):
 @AdminRightsCheck
 async def pause_admin(cli, message: Message, _, chat_id):
     if not len(message.command) == 1:
-        return await message.reply_text(_["general_2"])
+        return await message.reply_text(_["general_6"])
     if not await is_music_playing(chat_id):
         return await message.reply_text(_["admin_5"])
     await music_off(chat_id)
