@@ -11,22 +11,22 @@ from AnonX.utils.decorators.adminss import AdminRightsCheckk
 from AnonX.utils.inline.play import close_keyboard
 from strings.filters import command
 # Commands
-PAUSE_COMMAND = get_command("PAUSE_COMMAND")
+UNMUTE_COMMAND = get_command("UNMUTE_COMMAND")
 
 
 @app.on_message(
-    command(PAUSE_COMMAND)
+    command(UNMUTE_COMMAND)
     & filters.group
     & ~BANNED_USERS
 )
 @AdminRightsCheck
-async def pause_admin(cli, message: Message, _, chat_id):
+async def unmute_admin(cli, message: Message, _, chat_id):
     if not len(message.command) == 1:
         return await message.reply_text(_["general_6"])
     if not await is_music_playing(chat_id):
         return await message.reply_text(_["admin_7"])
     await music_off(chat_id)
-    await Anon.pause_stream(chat_id)
+    await Anon.unmute_stream(chat_id)
     await message.reply_text(
         _["admin_8"].format(message.from_user.first_name),
         reply_markup=close_keyboard
@@ -34,18 +34,18 @@ async def pause_admin(cli, message: Message, _, chat_id):
 
 
 @app.on_message(
-    command(PAUSE_COMMAND)
+    command(UNMUTE_COMMAND)
     & filters.channel
     & ~BANNED_USERS
 )
 @AdminRightsCheck
-async def pause_admin(cli, message: Message, _, chat_id):
+async def unmute_admin(cli, message: Message, _, chat_id):
     if not len(message.command) == 1:
         return await message.reply_text(_["general_6"])
     if not await is_music_playing(chat_id):
         return await message.reply_text(_["admin_7"])
     await music_off(chat_id)
-    await Anon.pause_stream(chat_id)
+    await Anon.unmute_stream(chat_id)
     await message.reply_text(
         _["admin_8"].format(message.from_user.first_name),
         reply_markup=close_keyboard
