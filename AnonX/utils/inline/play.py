@@ -268,7 +268,7 @@ def queue_markup(_, videoid, chat_id):
                 text="كمل",
                 callback_data=f"ADMIN Resume|{chat_id}",
             ),
-            InlineKeyboardButton(text="ايقاف مؤقت", callback_data=f"ADMIN Pause|{chat_id}"),
+            InlineKeyboardButton(text="وقف", callback_data=f"ADMIN Pause|{chat_id}"),
             InlineKeyboardButton(text="تخطي", callback_data=f"ADMIN Skip|{chat_id}"),
             InlineKeyboardButton(text="ايقاف", callback_data=f"ADMIN Stop|{chat_id}"),
         ],
