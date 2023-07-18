@@ -261,7 +261,7 @@ def slider_markup(_, videoid, user_id, query, query_type, channel, fplay):
 ## Queue Markup Anon
 
 
-def queue_markup(_, videoid, chat_id, user_id, query, query_type, channel, fplay):
+def queue_markup(_, videoid, chat_id):
     buttons = [
         [
             InlineKeyboardButton(
@@ -280,7 +280,6 @@ def queue_markup(_, videoid, chat_id, user_id, query, query_type, channel, fplay
         ],
     ]
     return buttons
-
 
 
 
