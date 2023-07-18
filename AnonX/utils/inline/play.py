@@ -94,7 +94,30 @@ def telegram_markup_timer(_, chat_id, played, dur):
 ## Inline without Timer Bar
 
 
-
+def stream_markup(_, videoid, chat_id):
+    buttons = [
+        [
+            InlineKeyboardButton(
+                text=_["PL_B_2"],
+                callback_data=f"add_playlist {videoid}",
+            ),
+            InlineKeyboardButton(
+                text=_["PL_B_3"],
+                callback_data=f"PanelMarkup {videoid}|{chat_id}",
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                text="‹ قـناة الـسورس ›", url="https://t.me/ah07v"
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                text="اضغط لاضافه البوت لمجموعتك", url="https://t.me/USER_BOT?startgroup=true"
+            ) 
+        ],
+    ]
+    return buttons
 
 
 def telegram_markup(_, chat_id):
