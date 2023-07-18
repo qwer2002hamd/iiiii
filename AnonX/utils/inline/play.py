@@ -46,7 +46,7 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
         ],
         [
             InlineKeyboardButton(
-                text="༺قـناة الـسورس༻", url="https://t.me/ah07v"
+                text="‹ قـناة الـسورس ›", url="https://t.me/ah07v"
             )
         ],
         [
@@ -63,14 +63,12 @@ def telegram_markup_timer(_, chat_id, played, dur):
     buttons = [
         [
             InlineKeyboardButton(
-                text=f"{played} •{bar}• {dur}",
-                callback_data="GetTimer",
-            )
-        ],
-        [
-            InlineKeyboardButton(
                 text=_["PL_B_2"],
                 callback_data=f"add_playlist {videoid}",
+            ),
+            InlineKeyboardButton(
+                text=_["PL_B_3"],
+                callback_data=f"PanelMarkup {videoid}|{chat_id}",
             )
         ],
         [
@@ -81,7 +79,7 @@ def telegram_markup_timer(_, chat_id, played, dur):
         ],
         [
             InlineKeyboardButton(
-                text="༺قـناة الـسورس༻", url="https://t.me/ah07v"
+                text="‹ قـناة الـسورس ›", url="https://t.me/ah07v"
             )
         ],
         [
@@ -97,23 +95,20 @@ def telegram_markup_timer(_, chat_id, played, dur):
 
 
 def stream_markup(_, videoid, chat_id):
-    bar = random.choice(selections)
     buttons = [
         [
             InlineKeyboardButton(
                 text=_["PL_B_2"],
                 callback_data=f"add_playlist {videoid}",
-            )
-        ],
-        [
+            ),
             InlineKeyboardButton(
                 text=_["PL_B_3"],
-                callback_data=f"PanelMarkup None|{chat_id}",
+                callback_data=f"PanelMarkup {videoid}|{chat_id}",
             )
         ],
         [
             InlineKeyboardButton(
-                text="༺قـناة الـسورس༻", url="https://t.me/ah07v"
+                text="‹ قـناة الـسورس ›", url="https://t.me/ah07v"
             )
         ],
         [
@@ -126,23 +121,20 @@ def stream_markup(_, videoid, chat_id):
 
 
 def telegram_markup(_, chat_id):
-    bar = random.choice(selections)
     buttons = [
         [
             InlineKeyboardButton(
                 text=_["PL_B_2"],
                 callback_data=f"add_playlist {videoid}",
-            )
-        ],
-        [
+            ),
             InlineKeyboardButton(
                 text=_["PL_B_3"],
-                callback_data=f"PanelMarkup None|{chat_id}",
+                callback_data=f"PanelMarkup {videoid}|{chat_id}",
             )
         ],
         [
             InlineKeyboardButton(
-                text="༺قـناة الـسورس༻", url="https://t.me/ah07v"
+                text="‹ قـناة الـسورس ›", url="https://t.me/ah07v"
             )
         ],
         [
