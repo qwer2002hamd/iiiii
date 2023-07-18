@@ -16,16 +16,11 @@ from config import BANNED_USERS
 from strings import get_command
 from AnonX import app
 from AnonX.core.call import Anon
-from AnonX.utils.database import (
-    get_active_chats,
-    get_lang,
-    is_active_chat,
-    is_music_playing,
-    is_nonadmin_chat,
-    music_off,
-    music_on,
-    set_loop,
-)
+from AlexaMusic.utils.database import (is_active_chat,
+                                       is_music_playing, is_muted,
+                                       is_nonadmin_chat, music_off,
+                                       music_on, mute_off, mute_on,
+                                       set_loop)
 from AnonX.utils.decorators import AdminRightsCheck
 
 # Commands
