@@ -262,7 +262,6 @@ def slider_markup(_, videoid, user_id, query, query_type, channel, fplay):
 
 
 def queue_markup(_, videoid, chat_id, user_id, query, query_type, channel, fplay):
-    bar = random.choice(selections)
     buttons = [
         [
             InlineKeyboardButton(
