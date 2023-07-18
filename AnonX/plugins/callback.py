@@ -15,13 +15,14 @@ from AnonX.core.call import Anon
 from AnonX.misc import SUDOERS, db
 from AnonX.utils import bot_sys_stats
 from AnonX.utils.database import (
-    get_active_chats,
-    get_lang,
     is_active_chat,
     is_music_playing,
+    is_muted,
     is_nonadmin_chat,
     music_off,
     music_on,
+    mute_off,
+    mute_on,
     set_loop,
 )
 from AnonX.utils.decorators.language import languageCB
@@ -206,7 +207,7 @@ async def del_back_playlist(client, CallbackQuery, _):
             )
         await CallbackQuery.answer()
         await mute_on(chat_id)
-        await Alexa.mute_stream(chat_id)
+        await Anon.mute_stream(chat_id)
         await CallbackQuery.message.reply_text(
             _["admin_6"].format(mention)
         )
@@ -217,7 +218,7 @@ async def del_back_playlist(client, CallbackQuery, _):
             )
         await CallbackQuery.answer()
         await mute_off(chat_id)
-        await Alexa.unmute_stream(chat_id)
+        await Anon.unmute_stream(chat_id)
         await CallbackQuery.message.reply_text(
             _["admin_8"].format(mention)
         )
