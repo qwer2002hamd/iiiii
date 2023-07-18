@@ -52,7 +52,7 @@ async def markup_panel(client, CallbackQuery: CallbackQuery, _):
     callback_request = callback_data.split(None, 1)[1]
     videoid, chat_id = callback_request.split("|")
     chat_id = CallbackQuery.message.chat.id
-    buttons = panel_markup_1( videoid, chat_id)
+    buttons = panel_markup_1( videoid, chat_id,_)
     try:
         await CallbackQuery.edit_message_reply_markup(
             reply_markup=InlineKeyboardMarkup(buttons)
@@ -101,18 +101,18 @@ async def del_back_playlist(client, CallbackQuery, _):
     pages = int(pages)
     if state == "Forw":
         if pages == 0:
-            buttons = panel_markup_2( videoid, chat_id)
+            buttons = panel_markup_2( videoid, chat_id,_)
         if pages == 2:
-            buttons = panel_markup_1( videoid, chat_id)
+            buttons = panel_markup_1( videoid, chat_id,_)
         if pages == 1:
-            buttons = panel_markup_3( videoid, chat_id)
+            buttons = panel_markup_3( videoid, chat_id,_)
     if state == "Back":
         if pages == 2:
-            buttons = panel_markup_2( videoid, chat_id)
+            buttons = panel_markup_2( videoid, chat_id,_)
         if pages == 1:
-            buttons = panel_markup_1( videoid, chat_id)
+            buttons = panel_markup_1( videoid, chat_id,_)
         if pages == 0:
-            buttons = panel_markup_3( videoid, chat_id)
+            buttons = panel_markup_3( videoid, chat_id,_)
     try:
         await CallbackQuery.edit_message_reply_markup(
             reply_markup=InlineKeyboardMarkup(buttons)
