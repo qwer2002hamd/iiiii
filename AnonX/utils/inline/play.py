@@ -261,7 +261,7 @@ def slider_markup(_, videoid, user_id, query, query_type, channel, fplay):
 ## Queue Markup Anon
 
 
-def queue_markup(_, videoid, chat_id):
+def queue_markup(_, videoid, chat_id, user_id, query, query_type, channel, fplay):
     bar = random.choice(selections)
     buttons = [
         [
@@ -287,7 +287,7 @@ def queue_markup(_, videoid, chat_id):
 
 
 
-def panel_markup_1(_, videoid, chat_id):
+def panel_markup_1(_, videoid, chat_id, user_id, query, query_type, channel, fplay):
     buttons = [
         [
             InlineKeyboardButton(
@@ -324,7 +324,7 @@ def panel_markup_1(_, videoid, chat_id):
     return buttons
 
 
-def panel_markup_2(_, videoid, chat_id):
+def panel_markup_2(_, videoid, chat_id, user_id, query, query_type, channel, fplay):
     buttons = [
         [
             InlineKeyboardButton(
@@ -362,7 +362,7 @@ def panel_markup_2(_, videoid, chat_id):
     return buttons
 
 
-def panel_markup_3(_, videoid, chat_id):
+def panel_markup_3(_, videoid, chat_id, user_id, query, query_type, channel, fplay):
     buttons = [
         [
             InlineKeyboardButton(
