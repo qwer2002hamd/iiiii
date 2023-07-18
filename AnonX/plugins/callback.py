@@ -199,27 +199,29 @@ async def del_back_playlist(client, CallbackQuery, _):
         await CallbackQuery.message.reply_text(
             _["admin_23"].format(mention)
         )
-    elif command == "Mute":
-        if await is_muted(chat_id):
+    if command == "Mute":
+        if not await is_music_playing(chat_id):
             return await CallbackQuery.answer(
-                _["admin_5"], show_alert=True
+                _["admin_1"], show_alert=True
             )
         await CallbackQuery.answer()
-        await mute_on(chat_id)
-        await Anon.mute_stream(chat_id)
+        await music_off(chat_id)
+        await Anon.pause_stream(chat_id)
         await CallbackQuery.message.reply_text(
-            _["admin_6"].format(mention)
+            _["admin_2"].format(mention),
+            reply_markup=close_keyboard
         )
     elif command == "Unmute":
-        if not await is_muted(chat_id):
+        if await is_music_playing(chat_id):
             return await CallbackQuery.answer(
-                _["admin_7"], show_alert=True
+                _["admin_3"], show_alert=True
             )
         await CallbackQuery.answer()
-        await mute_off(chat_id)
-        await Anon.unmute_stream(chat_id)
+        await music_on(chat_id)
+        await Anon.resume_stream(chat_id)
         await CallbackQuery.message.reply_text(
-            _["admin_8"].format(mention)
+            _["admin_4"].format(mention),
+            reply_markup=close_keyboard
         )
     elif command == "Skip":
         check = db.get(chat_id)
