@@ -84,21 +84,7 @@ YOUTUBE_IMG_URL = getenv(
     "AnonX/assets/Youtube.jpeg",
 )
 
-YOUTUBE_IMG_URL = getenv(
-    "YOUTUBE_IMG_URL",
-    "AnonX/assets/Youtube1.jpeg",
-)
 
-YOUTUBE_IMG_URL = getenv(
-    "YOUTUBE_IMG_URL",
-    "AnonX/assets/Youtube2.jpeg",
-)
-
-
-YOUTUBE_IMG_URL = getenv(
-    "YOUTUBE_IMG_URL",
-    "AnonX/assets/Youtube3.jpeg",
-)
 PLAYLIST_IMG_URL = "https://te.legra.ph/file/c75a4d4a6e3a6f10cd98c.jpg"
 
 GLOBAL_IMG_URL = "https://te.legra.ph/file/c16fcfcda43974fd29cb8.jpg"
