@@ -23,7 +23,7 @@ CHANNELPLAY_COMMAND : ["channelplay", "ربط القناه"]
 STREAM_COMMAND : ["stream", "cstream", "streamforce", "لايف", "ق لايف"]
 
 #Playlists Command
-PLAYLIST_COMMAND : ["/playlist", "القائمه"]
+PLAYLIST_COMMAND : ["/playlist", "القائمه","قائمة التشغيل"]
 DELETEPLAYLIST_COMMAND : ["deleteplaylist", "حذف القائمه"]
 
 
@@ -41,8 +41,8 @@ UNAUTH_COMMAND : ["unauth", "تنزيل ادمن"]
 AUTHUSERS_COMMAND : ["authusers", "قائمة الادمن"]
 PAUSE_COMMAND : ["pause", "cpause", "وقف", "#وقف", "/pause", "/cpause", "/وقف", "/ق وقف"]
 RESUME_COMMAND : ["resume", "cresume", "كمل", "#كمل", "/resume", "/cresume", "/ق كمل", "كمل", "#كملي"]
-MUTE_COMMAND : ["mute", "cmute", "اسكت", "#اسكت", "/mute", "/cmute", "/اسكت", "/ق اسكت"]
-UNMUTE_COMMAND : ["unmute", "cunmute", "اتكلم", "#اتكلم", "/unmute", "/cunmute", "/اتكلم", "/ق اتكلم"]
+MUTE_COMMAND : ["mute", "cmute","اسكت","كتم", "/mute", "/cmute", "/اسكت", "/ق اسكت"]
+UNMUTE_COMMAND : ["unmute", "cunmute", "اتكلم", "#اتكلم", "/unmute", "/cunmute", "الغاء الكتم", "/ق اتكلم"]
 STOP_COMMAND : ["stop", "end", "cstop", "cend", "ايقاف", "انهاء", "#ايقاف", "#انهاء", "/يقاف", "/انهاء", "/end", "/stop", "/ق ايقاف", "/ق انهاء", "/cend", "/cstop"]
 SKIP_COMMAND : ["skip", "cskip", "تخطي", "#تخطي", "/skip", "/cskip", "/تخطي", "/ق تخطي"]
 SHUFFLE_COMMAND : ["shuffle", "cshuffle"]
