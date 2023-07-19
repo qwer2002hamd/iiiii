@@ -5,32 +5,17 @@ import random
 ## After Edits with Timer Bar
 
 
-selections = [
-    "▁▄▂▇▄▅▄▅▃",
-    "▁▃▇▂▅▇▄▅▃",
-    "▃▁▇▂▅▃▄▃▅",
-    "▃▄▂▄▇▅▃▅▁",
-    "▁▃▄▂▇▃▄▅▃",
-    "▃▁▄▂▅▃▇▃▅",
-    "▁▇▄▂▅▄▅▃▄",
-    "▁▃▅▇▂▅▄▃▇",
-    "▃▅▂▅▇▁▄▃▁",
-    "▇▅▂▅▃▄▃▁▃",
-    "▃▇▂▅▁▅▄▃▁",
-    "▅▄▇▂▅▂▄▇▁",
-    "▃▅▂▅▃▇▄▅▃",
-]
+
 
 
 ## After Edits with Timer Bar
 
 
 def stream_markup_timer(_, videoid, chat_id, played, dur):
-    bar = random.choice(selections)
     buttons = [
         [
             InlineKeyboardButton(
-                text=f"{played} •{bar}• {dur}",
+                text=_["QU_B_2"].format(played, dur),
                 callback_data="GetTimer",
             )
         ],
@@ -59,8 +44,13 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
 
 
 def telegram_markup_timer(_, chat_id, played, dur):
-    bar = random.choice(selections)
     buttons = [
+        [
+            InlineKeyboardButton(
+                text=_["QU_B_2"].format(played, dur),
+                callback_data="GetTimer",
+            )
+        ],
         [
             InlineKeyboardButton(
                 text=_["PL_B_2"],
@@ -98,12 +88,6 @@ def stream_markup(_, videoid, chat_id):
     buttons = [
         [
             InlineKeyboardButton(
-                text=_["QU_B_2"], 
-                callback_data="GetTimer",
-            )
-        ],
-        [
-            InlineKeyboardButton(
                 text=_["PL_B_2"],
                 callback_data=f"add_playlist {videoid}",
             ),
@@ -128,12 +112,6 @@ def stream_markup(_, videoid, chat_id):
 
 def telegram_markup(_, chat_id):
     buttons = [
-        [
-            InlineKeyboardButton(
-                text=_["QU_B_2"],
-                callback_data="GetTimer",
-            )
-        ],
         [
             InlineKeyboardButton(
                 text=_["PL_B_2"],
