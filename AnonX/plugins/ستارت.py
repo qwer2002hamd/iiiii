@@ -4,7 +4,9 @@ from AnonX import app as Client
 from AnonX import app
 
 
-@Client.on_callback_query(filters.regex("arbic"))
+@app.on_message(
+     command(["/help", "الاوامر"])
+    & ~filters.edited
 async def arbic(_, query: CallbackQuery):
     await query.answer("home start")
     await query.edit_message_text(
