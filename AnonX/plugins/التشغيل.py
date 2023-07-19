@@ -48,7 +48,7 @@ async def cpanel(_, message: Message):
         
         
 
-@app.on_message(filters.private & command("طريقه التفعيل"))
+@app.on_message(filters.regex("طريقه التفعيل"))
 async def addbot(client: Client, message: Message):
     await message.reply_text(f"""
 ❓ طريقة استخدام البوت
@@ -95,7 +95,7 @@ REPLY_MESSAGE_BUTTONSS = [
 ]
 
   
-@app.on_message(filters.private & command("اوامر التشغيل"))
+@app.on_message(filters.regex("اوامر التشغيل"))
 async def com(_, message: Message):             
         text = REPLY_MESSAGEE
         reply_markup = ReplyKeyboardMarkup(REPLY_MESSAGE_BUTTONSS, resize_keyboard=True)
@@ -106,7 +106,7 @@ async def com(_, message: Message):
 
 
 
-@app.on_message(filters.private & command("رجوع"))
+@app.on_message(filters.regex("رجوع"))
 async def bask(_, message: Message):             
         text = REPLY_MESSAGE
         reply_markup = ReplyKeyboardMarkup(REPLY_MESSAGE_BUTTONS, resize_keyboard=True)
@@ -116,7 +116,7 @@ async def bask(_, message: Message):
         )
 
 
-@app.on_message(filters.private & command("اوامر القناه"))
+@app.on_message(filters.regex("اوامر القناه"))
 async def mnsat(client: Client, message: Message):
     await message.reply_text(f"""
 ♚ مرحبا بك في اومر التشغيل بالقنوات
@@ -144,7 +144,7 @@ async def mnsat(client: Client, message: Message):
         disable_web_page_preview=True
     )
 
-@app.on_message(filters.private & command("اوامر المجموعه"))
+@app.on_message(filters.regex("اوامر المجموعه"))
 async def laksk(client: Client, message: Message):
     await message.reply_text(f"""
 ♚ مرحبا بك في اوامر التشغيل في المجموعات
@@ -180,7 +180,7 @@ async def laksk(client: Client, message: Message):
     )
 
 
-@app.on_message(filters.private & command("اوامر بالانگليزي"))
+@app.on_message(filters.regex("اوامر بالانگليزي"))
 async def channvom(client: Client, message: Message):
     await message.reply_text(f"""
 ♚ مرحبا بك في اوامر التشغيل في المجموعات
