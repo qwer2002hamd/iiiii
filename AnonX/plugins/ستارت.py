@@ -7,10 +7,11 @@ from AnonX import app
 @app.on_message(
      command(["/help", "الاوامر"])
     & ~filters.edited
-async def arbic(_, query: CallbackQuery):
-    await query.answer("home start")
-    await query.edit_message_text(
-        f""" 🐰**[مرحبا بك] [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) ! \n
+)
+async def khalid(client: Client, message: Message):
+    await message.reply_photo(
+        photo=f"https://telegra.ph/file/c6c72a67afca445b3175a.jpg",
+caption=f""" 🐰**[مرحبا بك] [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) ! \n
 ※ [انا بوت تشغيل الأغاني والفيديو  في المكالمه المرئية](https://t.me/N_G_12) \n
 ※[لاظهار كيبورد الاعضاء اضغط](https://t.me/N_G_12) /AFYN \n
 ※ [في حال مواجهه اي مشكله انضم هنا](https://t.me/N_G_12)\n [ᖴ᥆ᖇ ᥲ️ᖇꪀ᥆ρ. 🐰](https://t.me/Y_H_U_4)
