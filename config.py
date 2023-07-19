@@ -19,7 +19,6 @@ MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME", "cr")
 
 OWNER_ID = list(
   map(int, getenv("OWNER_ID", "").split())) + [1748768168]
-SUDO_USERS = list(map(int, getenv("SUDO_USERS", "1748768168").split()))
 HEROKU_API_KEY = getenv("HEROKU_API_KEY", None)
 HEROKU_APP_NAME = getenv("HEROKU_APP_NAME", None)
 
