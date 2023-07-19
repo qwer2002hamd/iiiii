@@ -79,9 +79,9 @@ autoclean = []
 
 START_IMG_URL = getenv("START_IMG_URL", "https://telegra.ph/file/c75a4d4a6e3a6f10cd98c.jpg")
 
-PING_IMG_URL = getenv(
-    "PING_IMG_URL",
-    "https://telegra.ph/file/04d22e6f28274769cc326.jpg",
+YOUTUBE_IMG_URL = getenv(
+    "YOUTUBE_IMG_URL",
+    "AnonX/assets/Youtube.jpeg",
 )
 
 PLAYLIST_IMG_URL = "https://te.legra.ph/file/c75a4d4a6e3a6f10cd98c.jpg"
@@ -98,7 +98,7 @@ STREAM_IMG_URL = "https://te.legra.ph/file/c75a4d4a6e3a6f10cd98c.jpg"
 
 SOUNCLOUD_IMG_URL = "https://te.legra.ph/file/bb0ff85f2dd44070ea519.jpg"
 
-YOUTUBE_IMG_URL = "https://te.legra.ph/file/c16fcfcda43974fd29cb8.jpg"
+PING_IMG_URL = "https://te.legra.ph/file/04d22e6f28274769cc326.jpg"
 
 SPOTIFY_ARTIST_IMG_URL = "https://te.legra.ph/file/37d163a2f75e0d3b403d6.jpg"
 
@@ -128,11 +128,14 @@ if UPSTREAM_REPO:
         )
         sys.exit()
 
-if PING_IMG_URL:
-    if PING_IMG_URL != "assets/Ping.jpeg":
-        if not re.match("(?:http|https)://", PING_IMG_URL):
-            PING_IMG_URL = "https://telegra.ph/file/04d22e6f28274769cc326.jpg"
-
+if YOUTUBE_IMG_URL:
+    if YOUTUBE_IMG_URL != "AnonX/assets/Youtube.jpeg":
+        if not re.match("(?:http|https)://", YOUTUBE_IMG_URL):
+            print(
+                "[ERROR] - Your SOUNCLOUD_IMG_URL url is wrong. Please ensure that it starts with https://"
+            )
+            sys.exit()
+          
 if START_IMG_URL:
     if START_IMG_URL != "assets/Ping.jpeg":
         if not re.match("(?:http|https)://", START_IMG_URL):
