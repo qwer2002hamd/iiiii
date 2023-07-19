@@ -27,10 +27,7 @@ async def resume_com(cli, message: Message, _, chat_id):
         return await message.reply_text(_["admin_7"])
     await music_on(chat_id)
     await Anon.resume_stream(chat_id)
-    await message.reply_text(
-        _["admin_8"].format(message.from_user.first_name),
-        reply_markup=close_keyboard
-    )
+    await message.reply_text(_["admin_8"])
 
 
 @app.on_message(
@@ -46,7 +43,4 @@ async def resume_com(cli, message: Message, _, chat_id):
         return await message.reply_text(_["admin_7"])
     await music_on(chat_id)
     await Anon.resume_stream(chat_id)
-    await message.reply_text(
-        _["admin_8"].format(message.from_user.first_name),
-        reply_markup=close_keyboard
-    )
+    await message.reply_text(_["admin_8"])
