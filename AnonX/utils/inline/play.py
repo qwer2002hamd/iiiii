@@ -98,7 +98,7 @@ def stream_markup(_, videoid, chat_id):
     buttons = [
         [
             InlineKeyboardButton(
-                text=_["QU_B_2"].format(played, dur),
+                text=_["QU_B_2"], 
                 callback_data="GetTimer",
             )
         ],
@@ -130,7 +130,7 @@ def telegram_markup(_, chat_id):
     buttons = [
         [
             InlineKeyboardButton(
-                text=_["QU_B_2"].format(played, dur),
+                text=_["QU_B_2"],
                 callback_data="GetTimer",
             )
         ],
