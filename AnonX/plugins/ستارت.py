@@ -2,6 +2,12 @@ from pyrogram import filters
 from pyrogram.types import CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup
 from AnonX import app as Client
 from AnonX import app
+import asyncio
+from pyrogram import Client, filters
+from strings import get_command
+from strings.filters import command
+from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
+from AnonX import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
 
 
 @app.on_message(
