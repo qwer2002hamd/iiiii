@@ -10,7 +10,7 @@ START_COMMAND : ["start", "/start", "تفعيل"]
 HELP_COMMAND : ["help", "مساعده"]
 SETTINGS_COMMAND : ["settings", "setting", "اعدادات", "الاعدادت", "/اعدادات", "/الاعدادات", "/setting"]
 RELOAD_COMMAND : ["admincache", "reload", "ريلود"]
-GSTATS_COMMAND : ["gstats","الاحصائيات","احصائيات"]
+GSTATS_COMMAND : ["/gstats","الاحصائيات","احصائيات"]
 STATS_COMMAND : ["stats"]
 LANGUAGE_COMMAND : ["lang", "language", "langs", "لغه", "اللغه"]
 
