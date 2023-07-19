@@ -206,7 +206,7 @@ async def del_back_playlist(client, CallbackQuery, _):
             )
         await CallbackQuery.answer()
         await music_off(chat_id)
-        await Anon.mute_stream(chat_id)
+        await Anon.pause_stream(chat_id)
         await CallbackQuery.message.reply_text(
             _["admin_6"].format(mention),
             reply_markup=close_keyboard
@@ -218,7 +218,7 @@ async def del_back_playlist(client, CallbackQuery, _):
             )
         await CallbackQuery.answer()
         await music_on(chat_id)
-        await Anon.unmute_stream(chat_id)
+        await Anon.resume_stream(chat_id)
         await CallbackQuery.message.reply_text(
             _["admin_8"].format(mention),
             reply_markup=close_keyboard
