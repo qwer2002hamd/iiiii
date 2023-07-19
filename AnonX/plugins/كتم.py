@@ -20,13 +20,13 @@ MUTE_COMMAND = get_command("MUTE_COMMAND")
     & ~BANNED_USERS
 )
 @AdminRightsCheck
-async def mute_admin(cli, message: Message, _, chat_id):
+async def pause_admin(cli, message: Message, _, chat_id):
     if not len(message.command) == 1:
         return await message.reply_text(_["general_6"])
     if not await is_music_playing(chat_id):
         return await message.reply_text(_["admin_5"])
     await music_off(chat_id)
-    await Anon.mute_stream(chat_id)
+    await Anon.pause_stream(chat_id)
     await message.reply_text(
         _["admin_6"].format(message.from_user.first_name),
         reply_markup=close_keyboard
@@ -39,13 +39,13 @@ async def mute_admin(cli, message: Message, _, chat_id):
     & ~BANNED_USERS
 )
 @AdminRightsCheck
-async def mute_admin(cli, message: Message, _, chat_id):
+async def pause_admin(cli, message: Message, _, chat_id):
     if not len(message.command) == 1:
         return await message.reply_text(_["general_6"])
     if not await is_music_playing(chat_id):
         return await message.reply_text(_["admin_5"])
     await music_off(chat_id)
-    await Anon.mute_stream(chat_id)
+    await Anon.pause_stream(chat_id)
     await message.reply_text(
         _["admin_6"].format(message.from_user.first_name),
         reply_markup=close_keyboard
