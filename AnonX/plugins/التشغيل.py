@@ -82,19 +82,11 @@ REPLY_MESSAGEE = "اليك لـوحه اوامر التشغيل"
 
 REPLY_MESSAGE_BUTTONSS = [
          [
-             ("اوامر القناة")
-          ],
-          [
+             ("اوامر القناه"), 
              ("اوامر المجموعه") 
           ],
           [  
-             ("اوامر المجموعة بالانجليزي")
-          ],
-          [
-             ("اوامر مشتركه") 
-          ],
-          [
-             ("اوامر مشتركة بالانجليزي")             
+             ("اوامر بالانگليزي")             
           ],
           [
              ("رجوع"), 
@@ -124,7 +116,7 @@ async def bask(_, message: Message):
         )
 
 
-@app.on_message(filters.private & command("اوامر القناة"))
+@app.on_message(filters.private & command("اوامر القناه"))
 async def mnsat(client: Client, message: Message):
     await message.reply_text(f"""
 ♚ مرحبا بك في اومر التشغيل بالقنوات
@@ -166,6 +158,8 @@ async def laksk(client: Client, message: Message):
 ›› وقف ↫ لايقاف التشغيل الحالي مؤقتا
 ›› استئناف ↫ لاستمرار التشغيل المتوقف
 ›› قائمة التشغيل ↫ لمعرفة التشغيل الحالي 
+›› تحميل ↫ لتحميل اغنية من اليوتيوب
+›› تحميل فيديو ↫ لتحميل فيديو من اليوتيوب
 ›› اعدادات ↫ لضبط اعدادات البوت
 ›› يـوزر الـمطور ↫ @ah_2_v
 
@@ -186,12 +180,12 @@ async def laksk(client: Client, message: Message):
     )
 
 
-@app.on_message(filters.private & command("اوامر المجموعة بالانجليزي"))
+@app.on_message(filters.private & command("اوامر بالانگليزي"))
 async def channvom(client: Client, message: Message):
     await message.reply_text(f"""
 ♚ مرحبا بك في اوامر التشغيل في المجموعات
 
-•اوامر التشغيل الانجليزيه
+•اوامر التشغيل الانگليزيه
 
 /play - لتشغيل اغنيه
 /vplay - لتشغيل فيديو
@@ -201,6 +195,8 @@ async def channvom(client: Client, message: Message):
 /pause - لايقاف التشغيل الحالي مؤقتا
 /resume - استئناف التشغيل الحالي
 /reload - تحديث قائمة الادمنية
+/song - تحميل اغنيه من يوتيوب
+/video - تحميل فيديو من يوتيوب
 
 ›› يـوزر الـمطور @ah_2_v
 
@@ -223,55 +219,5 @@ async def channvom(client: Client, message: Message):
 
 
 
-@app.on_message(filters.private & command("اوامر مشتركه"))
-async def dowmmr(client: Client, message: Message):
-    await message.reply_text(f"""
 
-  ♚ مرحبا بك في الاوامر المشتركه
-
-•الاوامر المشتركه العربيه
-
-›› تحميل ↫ لتحميل اغنية من اليوتيوب
-›› تحميل فيديو ↫ لتحميل فيديو من اليوتيوب
-
-•⎆: قـناه الـسورس @ah07v  
-""",
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        "‹ قـناة الـيورس ›", url=f"https://t.me/ah07v"),
-                ],[
-                    InlineKeyboardButton(
-                        "اضغط لاضافه البوت لمجموعتك", url=f"https://t.me/USER_BOT?startgroup=true"),
-                ],
-            ]
-        ),
-        disable_web_page_preview=True
-    )
-@app.on_message(filters.private & command("اوامر مشتركة بالانجليزي"))
-async def dowhmr(client: Client, message: Message):
-    await message.reply_text(f"""
-♚ مرحبا بك في الاوامر المشتركه
-
-•الاوامر المشتركه الانجليزيه
-
-/song - تحميل اغنيه من يوتيوب
-/video - تحميل فيديو من يوتيوب
-
-•⎆: قـناه الـسورس @ah07v
-
-""",
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        "‹ قـناة الـسورس ›", url=f"https://t.me/ah07v"),
-                ],[
-                    InlineKeyboardButton(
-                        "اضغط لاضافه البوت لمجموعتك", url=f"https://t.me/USER_BOT?startgroup=true"),
-                ],
-            ]
-        ),
-        disable_web_page_preview=True
-    )
+   
