@@ -151,30 +151,6 @@ if YOUTUBE_IMG_URL:
             )
             sys.exit()
 
-if YOUTUBE_IMG_URL:
-    if YOUTUBE_IMG_URL != "AnonX/assets/Youtube1.jpeg":
-        if not re.match("(?:http|https)://", YOUTUBE_IMG_URL):
-            print(
-                "[ERROR] - Your SOUNCLOUD_IMG_URL url is wrong. Please ensure that it starts with https://"
-            )
-            sys.exit()
-
-if YOUTUBE_IMG_URL:
-    if YOUTUBE_IMG_URL != "AnonX/assets/Youtube2.jpeg":
-        if not re.match("(?:http|https)://", YOUTUBE_IMG_URL):
-            print(
-                "[ERROR] - Your SOUNCLOUD_IMG_URL url is wrong. Please ensure that it starts with https://"
-            )
-            sys.exit()
-
-if YOUTUBE_IMG_URL:
-    if YOUTUBE_IMG_URL != "AnonX/assets/Youtube3.jpeg":
-        if not re.match("(?:http|https)://", YOUTUBE_IMG_URL):
-            print(
-                "[ERROR] - Your SOUNCLOUD_IMG_URL url is wrong. Please ensure that it starts with https://"
-            )
-            sys.exit()
-
           
 if START_IMG_URL:
     if START_IMG_URL != "assets/Ping.jpeg":
