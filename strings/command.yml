@@ -9,9 +9,9 @@ PING_COMMAND : ["ping", "بينج"]
 START_COMMAND : ["start", "/start", "تفعيل"]
 HELP_COMMAND : ["help", "مساعده"]
 SETTINGS_COMMAND : ["settings", "setting", "اعدادات", "الاعدادت", "/اعدادات", "/الاعدادات", "/setting"]
-RELOAD_COMMAND : ["admincache", "reload", "ريلود"]
+RELOAD_COMMAND : ["/admincache", "/reload", "ريلود"]
 GSTATS_COMMAND : ["/gstats","الاحصائيات","احصائيات"]
-STATS_COMMAND : ["stats"]
+STATS_COMMAND : ["stats","stats"]
 LANGUAGE_COMMAND : ["lang", "language", "langs", "لغه", "اللغه"]
 
 # Play Commands
@@ -23,14 +23,14 @@ CHANNELPLAY_COMMAND : ["channelplay", "ربط القناه"]
 STREAM_COMMAND : ["stream", "cstream", "streamforce", "لايف", "ق لايف"]
 
 #Playlists Command
-PLAYLIST_COMMAND : ["playlist", "القائمه"]
+PLAYLIST_COMMAND : ["/playlist", "القائمه"]
 DELETEPLAYLIST_COMMAND : ["deleteplaylist", "حذف القائمه"]
 
 
 # Tools
 QUEUE_COMMAND : ["queue","cqueue", "player", "cplayer", "playing", "cplaying"]
-SONG_COMMAND : ["song", "تنزيل", "يوتيوب"]
-LYRICS_COMMAND : ["lyrics", "كلمات"]
+SONG_COMMAND : ["/song", "تنزيل", "يوتيوب","/video","تحميل فيديو","تحميل"]
+LYRICS_COMMAND : ["/lyrics", "كلمات"]
 TAG_COMMAND : ["@all"]
 TAG_COMMAND_STOP : ["all stop"]
 
