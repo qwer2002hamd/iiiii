@@ -1,6 +1,22 @@
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-from config import SUPPORT_GROUP, SUPPORT_CHANNEL
 import random
+
+from pyrogram.types import InlineKeyboardButton
+
+selections = [
+    "▁▄▂▇▄▅▄▅▃",
+    "▁▃▇▂▅▇▄▅▃",
+    "▃▁▇▂▅▃▄▃▅",
+    "▃▄▂▄▇▅▃▅▁",
+    "▁▃▄▂▇▃▄▅▃",
+    "▃▁▄▂▅▃▇▃▅",
+    "▁▇▄▂▅▄▅▃▄",
+    "▁▃▅▇▂▅▄▃▇",
+    "▃▅▂▅▇▁▄▃▁",
+    "▇▅▂▅▃▄▃▁▃",
+    "▃▇▂▅▁▅▄▃▁",
+    "▅▄▇▂▅▂▄▇▁",
+    "▃▅▂▅▃▇▄▅▃",
+]
 
 ## After Edits with Timer Bar
 
@@ -12,6 +28,7 @@ import random
 
 
 def stream_markup_timer(_, videoid, chat_id, played, dur):
+    bar = random.choice(selections)
     buttons = [
         [
             InlineKeyboardButton(
@@ -38,6 +55,7 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
 
 
 def telegram_markup_timer(_, chat_id, played, dur):
+    bar = random.choice(selections)
     buttons = [
         [
             InlineKeyboardButton(
